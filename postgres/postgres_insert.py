@@ -3,7 +3,7 @@ import json
 import time
 
 def insert_customer(cur): 
-    with open("customers.json", "r") as file:
+    with open("../customers.json", "r") as file:
         customers = json.loads(file.read())
     print("insert customer")
     t1 = time.perf_counter()
@@ -14,7 +14,7 @@ def insert_customer(cur):
     print(f"time : {t2-t1 : 0.4f}\n")
 
 def insert_products(cur): 
-    with open("products.json", "r") as file:
+    with open("../products.json", "r") as file:
         products = json.loads(file.read())
     print("insert products")
     t1 = time.perf_counter()
@@ -25,18 +25,18 @@ def insert_products(cur):
     print(f"time : {t2-t1 : 0.4f}\n")
 
 def insert_orders(cur): 
-    with open("orders.json", "r") as file:
+    with open("../orders.json", "r") as file:
         orders = json.loads(file.read())
     print("insert orders")
     t1 = time.perf_counter()
     for order in orders:
-        insert = f"INSERT INTO order_details VALUES({order['order_id']}, {order['customer_id']}, {order['product_id']}, {order['quantity']})" 
+        insert = f"INSERT INTO orders VALUES({order['order_id']}, {order['customer_id']}, {order['product_id']}, {order['quantity']})" 
         cur.execute(insert)
     t2 = time.perf_counter()
     print(f"time : {t2-t1 : 0.4f}\n")
 
 
-conn = psycopg2.connect(host="localhost", database="mydb", user="myusr", password="123")
+conn = psycopg2.connect(host="localhost", database="postgres", user="postgres", password="thomas")
 
 cur = conn.cursor()
 
@@ -65,6 +65,6 @@ insert_orders(cur)
 #     print("\n")
 
 
-# conn.commit()
+conn.commit()
 cur.close()
 conn.close()

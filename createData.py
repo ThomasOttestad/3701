@@ -34,7 +34,10 @@ def generate_orders(amount,nproducts, ncustomers):
             orders.append(order)
         json.dump(orders, file)
 
+ncustomer = 10
+nproducts = 10
+norders   = 10
 
-generate_customers(10)
-# generate_products(50000)
-# generate_orders(1000000,50000,10000)
+generate_customers(ncustomer)
+generate_products(nproducts)
+generate_orders(norders,nproducts,ncustomer)

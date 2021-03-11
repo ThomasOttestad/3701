@@ -18,18 +18,19 @@ from couchbase.n1ql import N1QLRequest
 cluster = Cluster('couchbase://localhost:8091', ClusterOptions(
   PasswordAuthenticator('thomas', 'thomas')))
 
-bucket = cluster.bucket("test")
+# bucket = cluster.bucket("product")
 
 
-collection = bucket.default_collection()
+# collection = bucket.default_collection()
 
 result = cluster.query(
-    "DELETE * FROM test WHERE customer_id > 0")
+    "SELECT product_name FROM product where product_id IS NOT NULL;")
 
 # print(result)
 
+
 for row in result:
-  print(row)
+  print(row["product_name"])
 
 # for row in bucket.n1ql_query('SELECT * FROM default'):
 #     print(row)
@@ -37,10 +38,9 @@ for row in result:
 # "CREATE INDEX ix_test ON test(customer_id);"
 
 # document = {"id":"2"}
-
 # result = collection.insert("test_id", document)
 
-print(collection)
+# print(collection)
 
 print("!!!!")
 # You can access multiple buckets using the same Cluster object.

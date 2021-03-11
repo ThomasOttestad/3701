@@ -1,0 +1,1 @@
+[{"query": "\n    UPDATE customer\n    SET age = 99999\n    where customer_id = 2\n    ", "time": 0.0008093520009424537, "Result": 0}, {"query": "\n    SELECT c.age\n    FROM customer as c\n    WHERE customer_id = 2\n    ", "time": 0.0003251960006309673, "Result": [[99999]]}]

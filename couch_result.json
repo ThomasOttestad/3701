@@ -1,0 +1,83 @@
+[
+    {
+        "query": "SELECT customer.customer_name FROM orders WHERE product.product_id = 5",
+        "time": 0.006335379999654833,
+        "Result": [
+            {
+                "customer_name": "c-8"
+            },
+            {
+                "customer_name": "c-7"
+            }
+        ]
+    },
+    {
+        "query": "SELECT product.product_name FROM orders WHERE customer.customer_id = 8",
+        "time": 0.00007339900002989452,
+        "Result": [
+            {
+                "product_name": "p-5"
+            },
+            {
+                "product_name": "p-6"
+            }
+        ]
+    },
+    {
+        "query": "SELECT customer.customer_name FROM orders WHERE (product.product_id = 6 OR product.product_id = 3) AND customer.age > 25",
+        "time": 0.000060013000620529056,
+        "Result": [
+            {
+                "customer_name": "c-3"
+            },
+            {
+                "customer_name": "c-7"
+            }
+        ]
+    },
+    {
+        "query": "SELECT product_name FROM product WHERE product_id > 0",
+        "time": 0.0000806459993327735,
+        "Result": [
+            {
+                "product_name": "p-1"
+            },
+            {
+                "product_name": "p-2"
+            },
+            {
+                "product_name": "p-3"
+            },
+            {
+                "product_name": "p-4"
+            },
+            {
+                "product_name": "p-5"
+            },
+            {
+                "product_name": "p-6"
+            },
+            {
+                "product_name": "p-7"
+            },
+            {
+                "product_name": "p-8"
+            },
+            {
+                "product_name": "p-9"
+            }
+        ]
+    },
+    {
+        "query": "SELECT customer_name FROM customer WHERE customer_id = 1 or customer_id = 3",
+        "time": 0.00005995199899189174,
+        "Result": [
+            {
+                "customer_name": "c-1"
+            },
+            {
+                "customer_name": "c-3"
+            }
+        ]
+    }
+]
