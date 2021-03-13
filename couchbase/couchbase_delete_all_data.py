@@ -17,8 +17,12 @@ cluster = Cluster('couchbase://localhost:8091', ClusterOptions(
   PasswordAuthenticator('thomas', 'thomas')))
 
 
-deleteCustomer = cluster.query(
-    "DELETE FROM `customer` where customer_id IS NOT NULL RETURNING *")
+# deleteCustomer = cluster.query(
+#     "DELETE FROM `customer` where customer_id IS NOT NULL RETURNING *")
+
+deleteCustomer = cluster.query("DELETE FROM orders where order_id IS NOT NULL;")
+
+print(deleteCustomer)
 
 # DELETE FROM `product`
 # WHERE product_id > 0;

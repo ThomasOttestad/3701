@@ -6,9 +6,9 @@ import json
 # def generate_products(amount):
 # def generate_orders(amount,nproducts, ncustomers):
 
-ncustomers = 10000
-nproducts  = 1000
-norders    = 100000
+# ncustomers = 100000
+# nproducts  = 100000
+# norders    = 1000000
 
 
 # with open("customers.json", "w+") as file:
@@ -30,16 +30,16 @@ norders    = 100000
 
 
 
-with open("orders.json", "r") as file:
+with open("../json/orders.json", "r") as file:
     orders = json.loads(file.read())
 
-with open("products.json", "r") as file:
+with open("../json/products.json", "r") as file:
     products = json.loads(file.read())
 
-with open("customers.json", "r") as file:
+with open("../json/customers.json", "r") as file:
     customers = json.loads(file.read())
 
-with open("ordersCouch.json", "w") as file:
+with open("../json/ordersCouch.json", "w") as file:
     ordersCouch = []
     for order in orders:
         quantity = order["quantity"]

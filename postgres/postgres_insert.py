@@ -3,7 +3,7 @@ import json
 import time
 
 def insert_customer(cur): 
-    with open("../customers.json", "r") as file:
+    with open("../json/customers.json", "r") as file:
         customers = json.loads(file.read())
     print("insert customer")
     t1 = time.perf_counter()
@@ -12,9 +12,10 @@ def insert_customer(cur):
         cur.execute(insert)
     t2 = time.perf_counter()
     print(f"time : {t2-t1 : 0.4f}\n")
+    return t2-t1 , len(customers)
 
 def insert_products(cur): 
-    with open("../products.json", "r") as file:
+    with open("../json/products.json", "r") as file:
         products = json.loads(file.read())
     print("insert products")
     t1 = time.perf_counter()
@@ -23,9 +24,10 @@ def insert_products(cur):
         cur.execute(insert)
     t2 = time.perf_counter()
     print(f"time : {t2-t1 : 0.4f}\n")
+    return t2-t1 , len(products)
 
 def insert_orders(cur): 
-    with open("../orders.json", "r") as file:
+    with open("../json/orders.json", "r") as file:
         orders = json.loads(file.read())
     print("insert orders")
     t1 = time.perf_counter()
@@ -34,37 +36,29 @@ def insert_orders(cur):
         cur.execute(insert)
     t2 = time.perf_counter()
     print(f"time : {t2-t1 : 0.4f}\n")
-
+    return t2-t1 , len(orders)
+    
 
 conn = psycopg2.connect(host="localhost", database="postgres", user="postgres", password="thomas")
 
 cur = conn.cursor()
 
-insert_customer(cur)
-insert_products(cur)
-insert_orders(cur)
 
-# commands = (\
-#     "SELECT c.customer_name             \n" \
-#     "FROM customer as c                 \n" \
-#     "JOIN order_details as o            \n" \
-#     "ON c.customer_id = o.customer_id   \n" \
-#     "JOIN product as p                  \n" \
-#     "ON p.product_id = o.product_id     \n" \
-#     "WHERE p.product_name = \'p-3\'",
-#     "SELECT * from customer"
-# )
+customer_time, customer_len = insert_customer(cur)
+product_time, product_len   = insert_products(cur)
+order_time   , order_len    = insert_orders(cur)
 
-# for com in commands:
-#     print(f"{com}")
-#     t1 = time.perf_counter()
-#     cur.execute(com)
-#     t2 = time.perf_counter()
-#     # print(f"result : {cur.fetchall()}")
-#     print(f"time : {t2-t1 : 0.4f}")
-#     print("\n")
+res_list = []
 
+res_list.append({"table" : "customer", "length" : customer_len, "time" : customer_time})
+res_list.append({"table" : "product" , "length" : product_len,  "time" : product_time})
+res_list.append({"table" : "orders"  , "length" : order_len,    "time" : order_time})
+
+
+with open("../json/postgres_insert_result.json", "w") as file:
+    json.dump(res_list , file)
 
 conn.commit()
+
 cur.close()
 conn.close()

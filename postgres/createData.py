@@ -3,7 +3,7 @@ import json
 
 
 def generate_customers(amount):
-    with open("customers.json", "w") as file:
+    with open("../json/customers.json", "w") as file:
         customers = []
         for i in range(amount):
             age = random.randrange(18, 60)
@@ -13,7 +13,7 @@ def generate_customers(amount):
 
 
 def generate_products(amount):
-    with open("products.json", "w") as file:
+    with open("../json/products.json", "w") as file:
         products = []
         for i in range(amount):
             age = random.randrange(18, 60)
@@ -24,7 +24,7 @@ def generate_products(amount):
 
 
 def generate_orders(amount,nproducts, ncustomers):
-    with open("orders.json", "w") as file:
+    with open("../json/orders.json", "w") as file:
         orders = []
         for i in range(amount):
             quantity = random.randrange(1, 100)
@@ -34,9 +34,9 @@ def generate_orders(amount,nproducts, ncustomers):
             orders.append(order)
         json.dump(orders, file)
 
-ncustomer = 10
-nproducts = 10
-norders   = 10
+ncustomer = 500000
+nproducts = 500000
+norders   = 7500000
 
 generate_customers(ncustomer)
 generate_products(nproducts)
