@@ -1,0 +1,578 @@
+[
+    {
+        "query": "SELECT customer.customer_name FROM orders where product.product_id < 1000",
+        "size": 1000,
+        "type": 1,
+        "time": "482.448938ms"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age + 1 where customer.customer_id < 20000",
+        "size": 20000,
+        "type": 2,
+        "time": "4.147104444s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age - 1 where customer.customer_id < 20000",
+        "size": 20000,
+        "type": 3,
+        "time": "4.389617323s"
+    },
+    {
+        "query": "SELECT product.* from product WHERE product_id < 10000",
+        "size": 10000,
+        "type": 4,
+        "time": "14.846360564s"
+    },
+    {
+        "query": "SELECT customer.customer_name FROM orders where product.product_id < 2000",
+        "size": 2000,
+        "type": 1,
+        "time": "4.369831562s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age + 1 where customer.customer_id < 40000",
+        "size": 40000,
+        "type": 2,
+        "time": "8.616330085s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age - 1 where customer.customer_id < 40000",
+        "size": 40000,
+        "type": 3,
+        "time": "9.64800658s"
+    },
+    {
+        "query": "SELECT product.* from product WHERE product_id < 20000",
+        "size": 20000,
+        "type": 4,
+        "time": "17.145218797s"
+    },
+    {
+        "query": "SELECT customer.customer_name FROM orders where product.product_id < 3000",
+        "size": 3000,
+        "type": 1,
+        "time": "3.045319896s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age + 1 where customer.customer_id < 60000",
+        "size": 60000,
+        "type": 2,
+        "time": "12.945155621s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age - 1 where customer.customer_id < 60000",
+        "size": 60000,
+        "type": 3,
+        "time": "12.123469057s"
+    },
+    {
+        "query": "SELECT product.* from product WHERE product_id < 30000",
+        "size": 30000,
+        "type": 4,
+        "time": "15.536645312s"
+    },
+    {
+        "query": "SELECT customer.customer_name FROM orders where product.product_id < 4000",
+        "size": 4000,
+        "type": 1,
+        "time": "3.848011017s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age + 1 where customer.customer_id < 80000",
+        "size": 80000,
+        "type": 2,
+        "time": "15.034470237s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age - 1 where customer.customer_id < 80000",
+        "size": 80000,
+        "type": 3,
+        "time": "15.148641031s"
+    },
+    {
+        "query": "SELECT product.* from product WHERE product_id < 40000",
+        "size": 40000,
+        "type": 4,
+        "time": "14.321160924s"
+    },
+    {
+        "query": "SELECT customer.customer_name FROM orders where product.product_id < 5000",
+        "size": 5000,
+        "type": 1,
+        "time": "8.842371295s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age + 1 where customer.customer_id < 100000",
+        "size": 100000,
+        "type": 2,
+        "time": "20.018595015s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age - 1 where customer.customer_id < 100000",
+        "size": 100000,
+        "type": 3,
+        "time": "19.087185877s"
+    },
+    {
+        "query": "SELECT product.* from product WHERE product_id < 50000",
+        "size": 50000,
+        "type": 4,
+        "time": "14.560884646s"
+    },
+    {
+        "query": "SELECT customer.customer_name FROM orders where product.product_id < 6000",
+        "size": 6000,
+        "type": 1,
+        "time": "9.676645921s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age + 1 where customer.customer_id < 120000",
+        "size": 120000,
+        "type": 2,
+        "time": "23.759369465s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age - 1 where customer.customer_id < 120000",
+        "size": 120000,
+        "type": 3,
+        "time": "22.629219277s"
+    },
+    {
+        "query": "SELECT product.* from product WHERE product_id < 60000",
+        "size": 60000,
+        "type": 4,
+        "time": "15.780999174s"
+    },
+    {
+        "query": "SELECT customer.customer_name FROM orders where product.product_id < 1000",
+        "size": 1000,
+        "type": 1,
+        "time": "454.90932ms"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age + 1 where customer.customer_id < 20000",
+        "size": 20000,
+        "type": 2,
+        "time": "3.752372174s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age - 1 where customer.customer_id < 20000",
+        "size": 20000,
+        "type": 3,
+        "time": "3.561052677s"
+    },
+    {
+        "query": "SELECT product.* from product WHERE product_id < 10000",
+        "size": 10000,
+        "type": 4,
+        "time": "13.543921284s"
+    },
+    {
+        "query": "SELECT customer.customer_name FROM orders where product.product_id < 2000",
+        "size": 2000,
+        "type": 1,
+        "time": "891.638533ms"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age + 1 where customer.customer_id < 40000",
+        "size": 40000,
+        "type": 2,
+        "time": "7.399125958s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age - 1 where customer.customer_id < 40000",
+        "size": 40000,
+        "type": 3,
+        "time": "7.316307565s"
+    },
+    {
+        "query": "SELECT product.* from product WHERE product_id < 20000",
+        "size": 20000,
+        "type": 4,
+        "time": "13.662895754s"
+    },
+    {
+        "query": "SELECT customer.customer_name FROM orders where product.product_id < 3000",
+        "size": 3000,
+        "type": 1,
+        "time": "1.321438782s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age + 1 where customer.customer_id < 60000",
+        "size": 60000,
+        "type": 2,
+        "time": "10.840919739s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age - 1 where customer.customer_id < 60000",
+        "size": 60000,
+        "type": 3,
+        "time": "12.029906849s"
+    },
+    {
+        "query": "SELECT product.* from product WHERE product_id < 30000",
+        "size": 30000,
+        "type": 4,
+        "time": "14.944854193s"
+    },
+    {
+        "query": "SELECT customer.customer_name FROM orders where product.product_id < 4000",
+        "size": 4000,
+        "type": 1,
+        "time": "1.814974619s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age + 1 where customer.customer_id < 80000",
+        "size": 80000,
+        "type": 2,
+        "time": "14.848951211s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age - 1 where customer.customer_id < 80000",
+        "size": 80000,
+        "type": 3,
+        "time": "14.8431138s"
+    },
+    {
+        "query": "SELECT product.* from product WHERE product_id < 40000",
+        "size": 40000,
+        "type": 4,
+        "time": "15.897275923s"
+    },
+    {
+        "query": "SELECT customer.customer_name FROM orders where product.product_id < 5000",
+        "size": 5000,
+        "type": 1,
+        "time": "2.385894614s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age + 1 where customer.customer_id < 100000",
+        "size": 100000,
+        "type": 2,
+        "time": "18.469037076s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age - 1 where customer.customer_id < 100000",
+        "size": 100000,
+        "type": 3,
+        "time": "17.667522504s"
+    },
+    {
+        "query": "SELECT product.* from product WHERE product_id < 50000",
+        "size": 50000,
+        "type": 4,
+        "time": "14.268521906s"
+    },
+    {
+        "query": "SELECT customer.customer_name FROM orders where product.product_id < 6000",
+        "size": 6000,
+        "type": 1,
+        "time": "3.288818093s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age + 1 where customer.customer_id < 120000",
+        "size": 120000,
+        "type": 2,
+        "time": "23.015636998s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age - 1 where customer.customer_id < 120000",
+        "size": 120000,
+        "type": 3,
+        "time": "24.214167882s"
+    },
+    {
+        "query": "SELECT product.* from product WHERE product_id < 60000",
+        "size": 60000,
+        "type": 4,
+        "time": "15.52331901s"
+    },
+    {
+        "query": "SELECT customer.customer_name FROM orders where product.product_id < 1000",
+        "size": 1000,
+        "type": 1,
+        "time": "431.132047ms"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age + 1 where customer.customer_id < 20000",
+        "size": 20000,
+        "type": 2,
+        "time": "3.711910674s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age - 1 where customer.customer_id < 20000",
+        "size": 20000,
+        "type": 3,
+        "time": "3.961305344s"
+    },
+    {
+        "query": "SELECT product.* from product WHERE product_id < 10000",
+        "size": 10000,
+        "type": 4,
+        "time": "15.48826324s"
+    },
+    {
+        "query": "SELECT customer.customer_name FROM orders where product.product_id < 2000",
+        "size": 2000,
+        "type": 1,
+        "time": "1.107615361s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age + 1 where customer.customer_id < 40000",
+        "size": 40000,
+        "type": 2,
+        "time": "8.281554311s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age - 1 where customer.customer_id < 40000",
+        "size": 40000,
+        "type": 3,
+        "time": "7.687042299s"
+    },
+    {
+        "query": "SELECT product.* from product WHERE product_id < 20000",
+        "size": 20000,
+        "type": 4,
+        "time": "13.98563364s"
+    },
+    {
+        "query": "SELECT customer.customer_name FROM orders where product.product_id < 3000",
+        "size": 3000,
+        "type": 1,
+        "time": "1.405446392s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age + 1 where customer.customer_id < 60000",
+        "size": 60000,
+        "type": 2,
+        "time": "13.418018764s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age - 1 where customer.customer_id < 60000",
+        "size": 60000,
+        "type": 3,
+        "time": "12.442549s"
+    },
+    {
+        "query": "SELECT product.* from product WHERE product_id < 30000",
+        "size": 30000,
+        "type": 4,
+        "time": "16.135312323s"
+    },
+    {
+        "query": "SELECT customer.customer_name FROM orders where product.product_id < 4000",
+        "size": 4000,
+        "type": 1,
+        "time": "2.004316628s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age + 1 where customer.customer_id < 80000",
+        "size": 80000,
+        "type": 2,
+        "time": "14.982754698s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age - 1 where customer.customer_id < 80000",
+        "size": 80000,
+        "type": 3,
+        "time": "14.603465916s"
+    },
+    {
+        "query": "SELECT product.* from product WHERE product_id < 40000",
+        "size": 40000,
+        "type": 4,
+        "time": "15.761738367s"
+    },
+    {
+        "query": "SELECT customer.customer_name FROM orders where product.product_id < 5000",
+        "size": 5000,
+        "type": 1,
+        "time": "2.435161251s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age + 1 where customer.customer_id < 100000",
+        "size": 100000,
+        "type": 2,
+        "time": "18.688351214s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age - 1 where customer.customer_id < 100000",
+        "size": 100000,
+        "type": 3,
+        "time": "18.959986689s"
+    },
+    {
+        "query": "SELECT product.* from product WHERE product_id < 50000",
+        "size": 50000,
+        "type": 4,
+        "time": "16.036651406s"
+    },
+    {
+        "query": "SELECT customer.customer_name FROM orders where product.product_id < 6000",
+        "size": 6000,
+        "type": 1,
+        "time": "3.394832952s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age + 1 where customer.customer_id < 120000",
+        "size": 120000,
+        "type": 2,
+        "time": "22.482700004s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age - 1 where customer.customer_id < 120000",
+        "size": 120000,
+        "type": 3,
+        "time": "22.081267901s"
+    },
+    {
+        "query": "SELECT product.* from product WHERE product_id < 60000",
+        "size": 60000,
+        "type": 4,
+        "time": "15.872009181s"
+    },
+    {
+        "query": "SELECT customer.customer_name FROM orders where product.product_id < 1000",
+        "size": 1000,
+        "type": 1,
+        "time": "505.629055ms"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age + 1 where customer.customer_id < 20000",
+        "size": 20000,
+        "type": 2,
+        "time": "4.569140122s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age - 1 where customer.customer_id < 20000",
+        "size": 20000,
+        "type": 3,
+        "time": "5.099774904s"
+    },
+    {
+        "query": "SELECT product.* from product WHERE product_id < 10000",
+        "size": 10000,
+        "type": 4,
+        "time": "13.749206496s"
+    },
+    {
+        "query": "SELECT customer.customer_name FROM orders where product.product_id < 2000",
+        "size": 2000,
+        "type": 1,
+        "time": "941.860904ms"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age + 1 where customer.customer_id < 40000",
+        "size": 40000,
+        "type": 2,
+        "time": "7.722407275s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age - 1 where customer.customer_id < 40000",
+        "size": 40000,
+        "type": 3,
+        "time": "8.90395888s"
+    },
+    {
+        "query": "SELECT product.* from product WHERE product_id < 20000",
+        "size": 20000,
+        "type": 4,
+        "time": "14.290790786s"
+    },
+    {
+        "query": "SELECT customer.customer_name FROM orders where product.product_id < 3000",
+        "size": 3000,
+        "type": 1,
+        "time": "1.775111988s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age + 1 where customer.customer_id < 60000",
+        "size": 60000,
+        "type": 2,
+        "time": "13.379744336s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age - 1 where customer.customer_id < 60000",
+        "size": 60000,
+        "type": 3,
+        "time": "12.516635883s"
+    },
+    {
+        "query": "SELECT product.* from product WHERE product_id < 30000",
+        "size": 30000,
+        "type": 4,
+        "time": "16.026881027s"
+    },
+    {
+        "query": "SELECT customer.customer_name FROM orders where product.product_id < 4000",
+        "size": 4000,
+        "type": 1,
+        "time": "2.046533992s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age + 1 where customer.customer_id < 80000",
+        "size": 80000,
+        "type": 2,
+        "time": "15.813616735s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age - 1 where customer.customer_id < 80000",
+        "size": 80000,
+        "type": 3,
+        "time": "15.822087964s"
+    },
+    {
+        "query": "SELECT product.* from product WHERE product_id < 40000",
+        "size": 40000,
+        "type": 4,
+        "time": "15.339991999s"
+    },
+    {
+        "query": "SELECT customer.customer_name FROM orders where product.product_id < 5000",
+        "size": 5000,
+        "type": 1,
+        "time": "2.374158142s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age + 1 where customer.customer_id < 100000",
+        "size": 100000,
+        "type": 2,
+        "time": "21.403836244s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age - 1 where customer.customer_id < 100000",
+        "size": 100000,
+        "type": 3,
+        "time": "22.946709254s"
+    },
+    {
+        "query": "SELECT product.* from product WHERE product_id < 50000",
+        "size": 50000,
+        "type": 4,
+        "time": "16.815659182s"
+    },
+    {
+        "query": "SELECT customer.customer_name FROM orders where product.product_id < 6000",
+        "size": 6000,
+        "type": 1,
+        "time": "3.831363343s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age + 1 where customer.customer_id < 120000",
+        "size": 120000,
+        "type": 2,
+        "time": "27.021150007s"
+    },
+    {
+        "query": "UPDATE customer SET customer.age = customer.age - 1 where customer.customer_id < 120000",
+        "size": 120000,
+        "type": 3,
+        "time": "26.950349981s"
+    },
+    {
+        "query": "SELECT product.* from product WHERE product_id < 60000",
+        "size": 60000,
+        "type": 4,
+        "time": "18.574424131s"
+    }
+]
