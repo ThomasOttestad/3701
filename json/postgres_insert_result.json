@@ -1,0 +1,17 @@
+[
+    {
+        "table": "customer",
+        "length": 500000,
+        "time": 33.112120807
+    },
+    {
+        "table": "product",
+        "length": 500000,
+        "time": 32.51843529199999
+    },
+    {
+        "table": "orders",
+        "length": 7500000,
+        "time": 705.112386349
+    }
+]

@@ -6,6 +6,8 @@ import sys
 import math
 
 in_file = sys.argv[1]
+in_file = sys.argv[2]
+
 with open(in_file, "r") as file:
     couch_data = json.loads(file.read())
 
@@ -36,7 +38,7 @@ def format_couch(data, type, size_arr, nrounds):
 
     return couch_data
 
-def format_postgres(data, type, size_arr, nrounds):
+def format_post(data, type, size_arr, nrounds):
     post_data = \
         [
         sum
@@ -61,8 +63,24 @@ def std_couch(mean, data, type, size_arr, nrounds):
         p = 0
         for data_point in data:
             if(data_point["type"] == type and data_point["size"] == size) :
+                # for i in range(nrounds):
+                p += (float(data_point["time"][:-2]) - mean[mean_idx])**2
+        print(p)
+        d = math.sqrt(p/4)
+        st.append(d)
+        mean_idx += 1
+        
+    return st
+
+def std_post(mean, data, type, size_arr, nrounds):
+    st = []
+    mean_idx = 0
+    for size in size_arr:
+        p = 0
+        for data_point in data:
+            if(data_point["type"] == type and data_point["size"] == size) :
                 for i in range(nrounds):
-                    p += (float(data_point["time"][:-2]) - mean[mean_idx])**2
+                    p += (data_point["time"] - mean[mean_idx])**2
         print(p)
         d = math.sqrt(p/4)
         st.append(d)
@@ -71,28 +89,38 @@ def std_couch(mean, data, type, size_arr, nrounds):
     return st
 
 
-couch_type_1_mean = format_couch(couch_data, 1, type_1_size, 4)
-couch_type_2_mean = format_couch(couch_data, 2, type_2_size, 4)
-couch_type_3_mean = format_couch(couch_data, 3, type_3_size, 4)
-couch_type_4_mean = format_couch(couch_data, 4, type_4_size, 4)
 
-std_couch_1 = std_couch(couch_type_1_mean, couch_data,1, type_1_size,4 )
-std_couch_2 = std_couch(couch_type_2_mean, couch_data,2, type_2_size,4 )
-std_couch_3 = std_couch(couch_type_3_mean, couch_data,3, type_3_size,4 )
-std_couch_4 = std_couch(couch_type_4_mean, couch_data,4, type_4_size,4 )
+# couch_type_1_mean = format_couch(couch_data, 1, type_1_size, 4)
+# couch_type_2_mean = format_couch(couch_data, 2, type_2_size, 4)
+# couch_type_3_mean = format_couch(couch_data, 3, type_3_size, 4)
+# couch_type_4_mean = format_couch(couch_data, 4, type_4_size, 4)
+
+# std_couch_1 = std_couch(couch_type_1_mean, couch_data,1, type_1_size,4 )
+# std_couch_2 = std_couch(couch_type_2_mean, couch_data,2, type_2_size,4 )
+# std_couch_3 = std_couch(couch_type_3_mean, couch_data,3, type_3_size,4 )
+# std_couch_4 = std_couch(couch_type_4_mean, couch_data,4, type_4_size,4 )
 
 
-print(couch_data[1]["time"])
 
-print(couch_type_2_mean)
-print(couch_type_3_mean)
-print(couch_type_4_mean)
+
+# post_type_1_mean = format_post(post_data, 1, type_1_size, 4)
+# post_type_2_mean = format_post(post_data, 2, type_2_size, 4)
+# post_type_3_mean = format_post(post_data, 3, type_3_size, 4)
+post_type_4_mean = format_post(post_data, 4, type_4_size, 4)
+
+
+# print(couch_data[1]["time"])
+
+# print(couch_type_2_mean)
+# print(couch_type_3_mean)
+# print(couch_type_4_mean)
 
 
 # plt.errorbar(type_1_size, couch_type_1_mean, yerr=std_couch_1)
 # plt.errorbar(type_2_size, couch_type_2_mean, yerr=std_couch_2)
 # plt.errorbar(type_3_size, couch_type_3_mean, yerr=std_couch_3)
-plt.errorbar(type_4_size, couch_type_4_mean, yerr=std_couch_4)
+# plt.errorbar(type_4_size, couch_type_4_mean, yerr=std_couch_4)
+plt.errorbar(type_4_size, post_type_4_mean, yerr=0)
 
 
 plt.ylim([0, 20])

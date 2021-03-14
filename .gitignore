@@ -128,4 +128,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-/json
+customer.json
+orders.json
+ordersCouch.json
+products.json
