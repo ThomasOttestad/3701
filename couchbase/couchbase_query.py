@@ -69,8 +69,8 @@ cluster = Cluster('couchbase://localhost:8091', ClusterOptions(
 
 
 resultList = [] 
-# with open("../json/couch_result.json", "r") as file:
-#     resultList = json.loads(file.read())
+with open("../json/couch_result.json", "r") as file:
+    resultList = json.loads(file.read())
 
 # print(resultList)
 
@@ -80,11 +80,10 @@ for query in queries:
     res = {"query": query[0], "size" : query[1], "type" : query[2], "time" : exec_time}
     resultList.append(res)
     print(res)
-    # print(result.rows())
     print("\n")
 
 
 
 
-# with open("../json/couch_result.json", "w+") as file:
-#     json.dump(resultList,file)
+with open("../json/couch_result.json", "w+") as file:
+    json.dump(resultList,file)
